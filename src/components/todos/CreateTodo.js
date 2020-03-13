@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux'
+import { createTodo } from '../../store/actions/todoActions'
 
-class CreateAudio extends Component {
+class CreateTodo extends Component {
   state = {
     title: '',
     content: ''
@@ -16,7 +18,8 @@ class CreateAudio extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    console.log(this.state);
+    // console.log(this.state);
+    this.props.createTodo(this.state)
   };
 
   render() {
@@ -45,4 +48,9 @@ class CreateAudio extends Component {
   }
 }
 
-export default CreateAudio;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    createTodo: (todo) => dispatch(createTodo(todo))
+  }
+}
+export default connect(null, mapDispatchToProps)(CreateTodo)

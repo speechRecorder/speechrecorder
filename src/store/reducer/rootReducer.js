@@ -1,10 +1,12 @@
-import { combineReducers } from 'redux'
-import audioReducer from './audioReducer'
-import authReducer from './authReducer'
+import authReducer from './authReducer';
+import todoReducer from './todoReducer';
+import { combineReducers } from 'redux';
+import { firestoreReducer } from 'redux-firestore';
 
 const rootReducer = combineReducers({
   auth: authReducer,
-  audioReducer: audioReducer
-})
+  todo: todoReducer,
+  firestore: firestoreReducer
+});
 
-export default rootReducer
+export default rootReducer;

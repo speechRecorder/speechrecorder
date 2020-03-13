@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function AudioDetails(props) {
+const TodoDetails = (props) => {
   const {id} = props.match.params
   return (
     <div className="container section audio-details">
@@ -17,3 +17,5 @@ export default function AudioDetails(props) {
     </div>
   )
 }
+
+export default TodoDetails
