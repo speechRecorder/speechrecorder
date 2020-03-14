@@ -8,7 +8,9 @@ import { Redirect } from 'react-router-dom';
 
 class Dashboard extends Component {
   render() {
-    const { todos, auth } = this.props;
+    let { todos, auth } = this.props;
+    const userId = auth.uid
+    // const userTodos = todos ? todos.filter(todo => todos.authorId === userId) : []
 
     if (!auth.uid) return <Redirect to="signin" />;
     return (
