@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import {connect} from 'react-redux'
-import { createTodo } from '../../store/actions/todoActions'
+import { connect } from 'react-redux';
+import { createTodo } from '../../store/actions/todoActions';
+import { Redirect } from 'react-router-dom';
 
 class CreateTodo extends Component {
   state = {
@@ -18,10 +19,15 @@ class CreateTodo extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    this.props.createTodo(this.state)
+    this.props.createTodo(this.state);
+    this.props.history.push('/')
   };
 
   render() {
+    const { auth } = this.props
+
+    if (!auth.uid) return <Redirect to="signin" />
+
     return (
       <div className="container">
         <form className="white" onSubmit={this.handleSubmit}>
@@ -39,7 +45,9 @@ class CreateTodo extends Component {
             />
           </div>
           <div className="input-field">
-            <button className="btn pink listen-1 z-depth-0">Click me to record!</button>
+            <button className="btn pink listen-1 z-depth-0">
+              Click me to record!
+            </button>
           </div>
         </form>
       </div>
@@ -47,9 +55,16 @@ class CreateTodo extends Component {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapStateToProps = state => {
   return {
-    createTodo: (todo) => dispatch(createTodo(todo))
-  }
-}
-export default connect(null, mapDispatchToProps)(CreateTodo)
+    auth: state.firebase.auth
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    createTodo: todo => dispatch(createTodo(todo))
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(CreateTodo);
