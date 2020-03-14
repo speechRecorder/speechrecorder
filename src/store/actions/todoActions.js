@@ -5,15 +5,16 @@ export const createTodo = todo => {
     // allow us to use firrebase api within action creator
     // thunk is pausing the dispatch
     // making async call to our DB
-
     try {
       const firestore = getFirestore();
+      const profile = getState().firebase.profile;
+      const authorId = getState().firebase.auth.uid;
       // ...todo is referencing all the properties within that document
       await firestore.collection('todos').add({
         ...todo,
-        authorFirstName: 'thomas',
-        authorLastName: 'zhang',
-        authorId: 12345,
+        authorFirstName: profile.firstName,
+        authorLastName: profile.lastName,
+        authorId: authorId,
         createdAt: new Date()
       });
       dispatch({ type: 'CREATE_TODO', todo: todo });
