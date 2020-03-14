@@ -3,7 +3,6 @@ import TodoSummary from './TodoSummary';
 import { Link } from 'react-router-dom';
 
 const TodoList = ({ todos }) => {
-  console.log("todos", todos)
   return (
     <div className="todo-list section">
       {/* ensure that we have todos */}
