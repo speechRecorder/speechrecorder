@@ -33,7 +33,6 @@ const TodoDetails = props => {
 };
 
 const mapStateToProps = (state, ownProps) => {
-  // console.log("state", state)
   const id = ownProps.match.params.id;
   const todos = state.firestore.data.todos;
   const todo = todos ? todos[id] : null;
