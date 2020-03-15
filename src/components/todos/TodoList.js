@@ -3,7 +3,15 @@ import TodoSummary from './TodoSummary';
 import { Link } from 'react-router-dom';
 
 const TodoList = ({ todos }) => {
-  console.log("todos", todos)
+  if (todos && todos.length === 0)
+    return (
+      <div class="card-panel">
+        <p class="left-align">
+          <i>No todos yet, record one in "New Todo"</i>
+        </p>
+      </div>
+    );
+
   return (
     <div className="todo-list section">
       {/* ensure that we have todos */}
