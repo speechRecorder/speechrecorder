@@ -10,7 +10,6 @@ class Dashboard extends Component {
   render() {
     let { todos, auth } = this.props;
     const userId = auth.uid
-    // console.log('USER ID:', userId)
     const userTodos = todos ? todos.filter(todo => todo.authorId === userId) : null
 
     if (!auth.uid) return <Redirect to="signin" />;
