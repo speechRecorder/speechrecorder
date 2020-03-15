@@ -2,14 +2,6 @@ import React from 'react';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
 
-const SpeechRecognition =
-  window.SpeechRecognition || window.webkitSpeechRecognition;
-const recognition = new SpeechRecognition();
-
-recognition.continous = true;
-recognition.interimResults = true;
-recognition.lang = 'en-US';
-
 class TodoSummary extends React.Component {
   render() {
     const { todo } = this.props;
@@ -25,7 +17,7 @@ class TodoSummary extends React.Component {
           <Link to={`/todos/${todo.id}`} key={todo.id}>
             <p>{content}</p>
           </Link>
-            <p>Posted by {`${authorFirstName} ${authorLastName}`}</p>
+          <p>Posted by {`${authorFirstName} ${authorLastName}`}</p>
           <p className="grey-text">{moment(createdAt.toDate()).calendar()}</p>
         </div>
       </div>
