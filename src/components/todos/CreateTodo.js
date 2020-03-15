@@ -91,12 +91,12 @@ class CreateTodo extends Component {
           </div>
           <div className="input-field">
             <button className="btn pink listen-1 z-depth-0">
-              Click me to Submit!
+              Submit!
             </button>
           </div>
         </form>
-        <button id="microphone-btn" style={button} onClick={this.toggleListen}>
-          Talk
+        <button id="microphone-btn" className="waves-effect waves-light btn" onClick={this.toggleListen}>
+          Record!
         </button>
       </div>
     );
@@ -118,13 +118,6 @@ const mapDispatchToProps = dispatch => {
 export default connect(mapStateToProps, mapDispatchToProps)(CreateTodo);
 
 const styles = {
-  button: {
-    width: '60px',
-    height: '60px',
-    background: 'lightblue',
-    borderRadius: '50%',
-    margin: '6em 0 2em 0'
-  },
   interim: {
     color: 'gray',
     border: '#ccc 1px solid',
@@ -134,4 +127,4 @@ const styles = {
   }
 };
 
-const { button, interim } = styles;
+const {interim } = styles;
