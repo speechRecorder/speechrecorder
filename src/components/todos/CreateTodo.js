@@ -17,7 +17,8 @@ class CreateTodo extends Component {
     title: '',
     content: '',
     interimTranscript: '',
-    listening: false
+    listening: false,
+    finalTranscript: ''
   };
 
   toggleListen = () => {
