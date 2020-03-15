@@ -16,9 +16,8 @@ class CreateTodo extends Component {
   state = {
     title: '',
     content: '',
-    listening: false,
-    interimTranscription: '',
-    finalTranscription: ''
+    interimTranscript: '',
+    listening: false
   };
 
   toggleListen = () => {
@@ -43,10 +42,10 @@ class CreateTodo extends Component {
         else interimTranscript += transcript;
       }
       // document.getElementById('interim').innerHTML = interimTranscript;
-      // document.getElementById('final').innerHTML = finalTranscript;
+      document.getElementById('todo-content').innerHTML = finalTranscript;
       this.setState({
-        interimTranscription: interimTranscript,
-        finalTranscription: finalTranscript
+        content: finalTranscript,
+        interimTranscript: interimTranscript
       });
     };
   };
@@ -72,32 +71,33 @@ class CreateTodo extends Component {
     return (
       <div className="container">
         <form className="white" onSubmit={this.handleSubmit}>
-          <h5 className="grey-text text-darken-3">Record Anything</h5>
+          <h5 className="grey-text text-darken-3">Record </h5>
           <div className="input-field">
-            <label htmlFor="title"></label>
-            <input type="title" name="title" onChange={this.handleChange} />
+            <label htmlFor="title">Title</label>
+            <input type="title" name="title" onChange={this.handleChange} style={interim} />
+          </div>
+          <div id="interim" style={interim} className="input-field">
+            {this.state.interimTranscript}
           </div>
           <div className="input-field">
-            <label htmlFor="content">{this.state.finalTranscription}</label>
-            <textarea
+            <label htmlFor="content">Content</label>
+            <input
               name="content"
               type="content"
               onChange={this.handleChange}
+              id="todo-content"
+              style={interim}
             />
           </div>
           <div className="input-field">
             <button className="btn pink listen-1 z-depth-0">
-              Click me to record!
+              Click me to Submit!
             </button>
           </div>
         </form>
-
-        {/* LISTEN BUTTON */}
         <button id="microphone-btn" style={button} onClick={this.toggleListen}>
           Talk
         </button>
-        <div id="interim" style={interim}>{this.state.interimTranscription}</div>
-        <div id="final" style={final}>{this.state.finalTranscription}</div>
       </div>
     );
   }
@@ -131,14 +131,7 @@ const styles = {
     padding: '1em',
     margin: '1em',
     width: '300px'
-  },
-  final: {
-    color: 'black',
-    border: '#ccc 1px solid',
-    padding: '1em',
-    margin: '1em',
-    width: '300px'
   }
 };
 
-const { button, interim, final } = styles;
+const { button, interim } = styles;

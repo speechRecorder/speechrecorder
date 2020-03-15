@@ -19,10 +19,10 @@ background-position: bottom
 background-color: --whatever we want
 */
 
-form {
+/* form {
   padding: 20px;
   margin-top: 60px
-}
+} */
 
 form button, form h5{
   margin: 20px 0;

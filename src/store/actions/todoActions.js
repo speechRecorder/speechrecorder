@@ -23,3 +23,15 @@ export const createTodo = todo => {
     }
   };
 };
+
+export const deleteTodo = todoId => {
+  return async (dispatch, getState, { getFirebase, getFirestore }) => {
+    try {
+      const firestore = getFirestore();
+      console.log("todoId", todoId)
+
+    } catch (error) {
+      dispatch( { type: 'DELETE_ERROR', error })
+    }
+  }
+}
