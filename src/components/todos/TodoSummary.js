@@ -1,12 +1,12 @@
 import React from 'react';
 import moment from 'moment'
 
-export default function TodoSummary({ todo }) {
+const TodoSummary = ({ todo }) => {
   const { title, content, authorFirstName, authorLastName, createdAt } = todo;
   return (
     <div className="card z-depth-0 todo-summary">
       <div className="card-content grey-text text-darken-3">
-        <span className="card-title">{title}</span>
+        <span className="card-title"><b>{title}</b></span>
         <p>{content}</p>
         <p>Posted by {`${authorFirstName} ${authorLastName}`}</p>
         <p className="grey-text">{moment(createdAt.toDate()).calendar()}</p>
@@ -14,3 +14,5 @@ export default function TodoSummary({ todo }) {
     </div>
   );
 }
+
+export default TodoSummary
