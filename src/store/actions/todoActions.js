@@ -27,9 +27,9 @@ export const createTodo = todo => {
 export const deleteTodo = todoId => {
   return async (dispatch, getState, { getFirebase, getFirestore }) => {
     try {
-      // const firestore = getFirestore();
-      console.log("todoId", todoId)
-
+      const firestore = getFirestore();
+      await firestore.collection('todos').doc(todoId).delete()
+      dispatch({ type: 'DELETE_TODO', todoId})
     } catch (error) {
       dispatch( { type: 'DELETE_ERROR', error })
     }

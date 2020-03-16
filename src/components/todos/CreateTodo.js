@@ -43,7 +43,7 @@ class CreateTodo extends Component {
         else interimTranscript += transcript;
       }
 
-      
+
       document.getElementById('todo-content').innerHTML = finalTranscript;
       this.setState({
         content: finalTranscript,
@@ -69,7 +69,7 @@ class CreateTodo extends Component {
     const { auth } = this.props;
 
     if (!auth.uid) return <Redirect to="signin" />;
-    
+
     return (
       <div className="container">
         <button
@@ -118,7 +118,7 @@ class CreateTodo extends Component {
           </div>
           <div className="input-field">
             <button className="btn waves-effect waves-light btn-large">Submit!
-            <i class="material-icons right">send</i>
+            <i className="material-icons right">send</i>
             </button>
           </div>
         </form>

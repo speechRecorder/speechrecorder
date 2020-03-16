@@ -16,9 +16,7 @@ const TodoList = ({ todos, rate, pitch }) => {
       {todos &&
         todos.map(todo => {
           return (
-            <div>
             <TodoSummary rate={rate} pitch={pitch} todo={todo} key={todo.id} />
-            </div>
           );
         })}
     </div>
