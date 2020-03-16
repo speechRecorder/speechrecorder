@@ -42,7 +42,7 @@ class CreateTodo extends Component {
         if (event.results[i].isFinal) finalTranscript += transcript + ' ';
         else interimTranscript += transcript;
       }
-      // document.getElementById('interim').innerHTML = interimTranscript;
+      
       document.getElementById('todo-content').innerHTML = finalTranscript;
       this.setState({
         content: finalTranscript,
@@ -82,7 +82,7 @@ class CreateTodo extends Component {
           </div>
           <div className="input-field">
             <label htmlFor="content">Content</label>
-            <input
+            <textarea
               name="content"
               type="content"
               onChange={this.handleChange}

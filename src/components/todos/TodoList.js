@@ -2,7 +2,7 @@ import React from 'react';
 import TodoSummary from './TodoSummary';
 import { Link } from 'react-router-dom';
 
-const TodoList = ({ todos }) => {
+const TodoList = ({ todos, rate, pitch }) => {
   if (todos && todos.length === 0)
     return (
       <div className="card-panel">
@@ -18,7 +18,7 @@ const TodoList = ({ todos }) => {
       {todos &&
         todos.map(todo => {
           return (
-              <TodoSummary todo={todo} key={todo.id}/>
+              <TodoSummary rate={rate} pitch={pitch} todo={todo} key={todo.id}/>
           );
         })}
     </div>
