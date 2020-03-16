@@ -1,15 +1,14 @@
 # Chat-Bacc
 
-#### Chat-Bacc is an app that allows you to record reminders or set todos with Speech to Text implementation. You can play back reminders at a customized pitch/rate/voice of your choosing. A quick and easy reminder app that you can use at any time.
+#### Chat-Bacc is a quick and easy app that allows you to record reminders or set todos with Speech to Text implementation. You can play back reminders at a customized pitch/rate/voice of your choosing.
 
 ## Tech Stack
-
-[Node.js](https://nodejs.org/en/)
-[Firebase](https://firebase.google.com/)
-[React](https://facebook.github.io/react/)
-[Redux](https://redux.js.org/)
-[Material CSS](https://materializecss.com/)
-[Bootstrap 4](https://getbootstrap.com/)
+- [Node.js](https://nodejs.org/en/)
+- [Firebase](https://firebase.google.com/)
+- [React](https://facebook.github.io/react/)
+- [Redux](https://redux.js.org/)
+- [Material CSS](https://materializecss.com/)
+- [Bootstrap 4](https://getbootstrap.com/)
 
 Either visit our deployed website at https://chat-bacc.firebaseapp.com/ or….
 Local Setup
@@ -26,9 +25,9 @@ Run “npm start” to view the app at http://localhost:3000/
 - Automatically add changes to your list of todos when you add or delete them.
 - Users can see all of their todos, or none at all.
 
-#### Demo recording todo
+#### Demo Recording Todo
 ![](DEMO_record.gif)
-#### Demo playback of todo
+#### Demo Playback of Todo
 ![](DEMO_playback.gif)
 
 ## Learning Takeaways
@@ -37,8 +36,7 @@ Incorporating the Cloud Firestore with React/Redux was initially a challenge, bu
 We had a fun learning experience with converting “old” promise syntax into more modern code with try/catch and async/await
 We experimented between using dom manipulation and react state
 
-#### Future implementation and functionality
-
+## Future implementation and functionality
 Have the playback include different languages as well as accents.
 Be able to check off your todos/reminders when you are done.
 You can then filter your list by todos that are done or not.
