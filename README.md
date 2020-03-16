@@ -37,10 +37,12 @@ We had a fun learning experience with converting “old” promise syntax into m
 We experimented between using dom manipulation and react state
 
 ## Future implementation and functionality
-Have the playback include different languages as well as accents.
-Be able to check off your todos/reminders when you are done.
-You can then filter your list by todos that are done or not.
-Have Google OAuth implemented and have the app allow you to sync up your todos with your google calendar.
-It should also sync with our Firebase - Cloud Firestore so that if you do delete a todo, it should also delete it from your google calendar.
-The app will be able to automatically categorize and filter a user's todos depending on key words and phrases.
-Make it a PWA. We would want the functionality to be a PWA so that a user can access it offline but also make changes if they have no internet connection.
+- Have the playback include different languages as well as accents.
+- Be able to check off your todos/reminders when you are done.
+- You can then filter your list by todos that are done or not.
+- Have Google OAuth implemented and have the app allow you to sync up your todos with your google calendar.
+- It should also sync with our Firebase - Cloud Firestore so that if you do delete a todo.
+- It should also delete it from your google calendar.
+- The app will be able to automatically categorize and filter a user's todos depending on key words and phrases.
+- Make it a PWA. 
+- We would want the functionality to be a PWA so that a user can access it offline but also make changes if they have no internet connection.
