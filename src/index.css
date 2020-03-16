@@ -13,6 +13,15 @@ body {
   min-height: 100%
 }
 
+textarea {
+  font-size: large;
+  width:200px;
+  height:100px
+}
+
+#interim {
+  height:43px
+}
 /* form {
   padding: 20px;
   margin-top: 60px
