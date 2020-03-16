@@ -16,7 +16,7 @@ const Navbar = props => {
     <nav className="nav-wrapper grey darken-3">
       <div className="container">
         <Link to="/" className="brand-logo">
-          ChatBacc<i className="material-icons right large">mic_none</i> 
+          <i><b>ChatBacc</b></i><i className="material-icons right large">mic_none</i> 
         </Link>
         {links}
       </div>

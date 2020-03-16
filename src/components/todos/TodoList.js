@@ -1,6 +1,5 @@
 import React from 'react';
 import TodoSummary from './TodoSummary';
-// import { Link } from 'react-router-dom';
 
 const TodoList = ({ todos, rate, pitch }) => {
   if (todos && todos.length === 0)

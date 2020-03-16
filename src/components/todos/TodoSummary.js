@@ -11,7 +11,7 @@ class TodoSummary extends React.Component {
 
     return (
       <div className="card z-depth-0 todo-summary ">
-        <div className="card-content grey-text text-darken-3 text-center">
+        <div className="card-content grey-text text-darken-3 text-center" id="content-card">
           <span className="card-title ">
             <div className="waves-effect waves-light btn">
               Playback{' '}

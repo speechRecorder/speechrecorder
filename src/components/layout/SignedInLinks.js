@@ -3,15 +3,20 @@ import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { signOut } from '../../store/actions/authActions';
 
-const SignedInLinks = ({signOut, profile}) => {
+const SignedInLinks = ({ signOut, profile }) => {
   return (
     <ul className="right">
       <li>
         <NavLink to="/createtodo">
-          New ToDo</NavLink>
+          <i className="material-icons left">add_circle_outline</i>
+          <b>New ToDo</b>
+        </NavLink>
       </li>
       <li>
-        <a href="/" onClick={signOut}>Log Out</a>
+        <a href="/" onClick={signOut}>
+          <i className="material-icons left">input</i>
+          <b>Log Out</b>
+        </a>
       </li>
       <li>
         <NavLink to="/" className="btn btn-floating green lighten-1">
