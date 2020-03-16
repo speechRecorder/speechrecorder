@@ -69,7 +69,7 @@ class CreateTodo extends Component {
     const { auth } = this.props;
 
     if (!auth.uid) return <Redirect to="signin" />;
-
+    
     return (
       <div className="container">
         <button
@@ -78,7 +78,7 @@ class CreateTodo extends Component {
           onClick={this.toggleListen}
         >
           Click me to Record!
-          <i class="material-icons right">mic_none</i>
+          <i className="material-icons right">mic_none</i>
         </button>
         <form className="cream" onSubmit={this.handleSubmit}>
           {/* <div className="input-field">
@@ -91,11 +91,11 @@ class CreateTodo extends Component {
             />
           </div> */}
 
-          {/* <div id="interim" style={interim} className="input-field mt-5">
-            {this.state.interimTranscript}
-          </div> */}
+          <div id="interim" style={interim} className="input-field mt-5">
+            <input disabled value={this.state.interimTranscript || "Interim Transcription"} id="disabled" />
+          </div>
 
-          <div className="input-field">
+          {/* <div className="input-field">
             <label htmlFor="interim">Interim</label>
             <textarea
               name="interim"
@@ -104,11 +104,10 @@ class CreateTodo extends Component {
               id="interim"
               style={interim}
             />
-          </div>
-
+          </div> */}
 
           <div className="input-field">
-            <label htmlFor="content">Content</label>
+            {/* <label htmlFor="content">Content</label> */}
             <textarea
               name="content"
               type="content"
@@ -146,7 +145,7 @@ const styles = {
   interim: {
     color: 'black',
     border: 'black 1px solid',
-    padding: '1em',
+    // padding: '1em',
     width: '300px',
   }
 };
