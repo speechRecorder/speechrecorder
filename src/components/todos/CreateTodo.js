@@ -42,6 +42,7 @@ class CreateTodo extends Component {
         if (event.results[i].isFinal) finalTranscript += transcript + ' ';
         else interimTranscript += transcript;
       }
+
       
       document.getElementById('todo-content').innerHTML = finalTranscript;
       this.setState({
@@ -71,15 +72,41 @@ class CreateTodo extends Component {
 
     return (
       <div className="container">
-        <form className="white" onSubmit={this.handleSubmit}>
-          <h5 className="grey-text text-darken-3">Record </h5>
-          <div className="input-field">
+        <button
+          id="microphone-btn"
+          className="waves-effect waves-light btn-small mt-4"
+          onClick={this.toggleListen}
+        >
+          Click me to Record!
+          <i class="material-icons right">mic_none</i>
+        </button>
+        <form className="cream" onSubmit={this.handleSubmit}>
+          {/* <div className="input-field">
             <label htmlFor="title">Title</label>
-            <input type="title" name="title" onChange={this.handleChange} style={interim} />
-          </div>
-          <div id="interim" style={interim} className="input-field">
+            <textarea
+              type="title"
+              name="title"
+              onChange={this.handleChange}
+              style={interim}
+            />
+          </div> */}
+
+          {/* <div id="interim" style={interim} className="input-field mt-5">
             {this.state.interimTranscript}
+          </div> */}
+
+          <div className="input-field">
+            <label htmlFor="interim">Interim</label>
+            <textarea
+              name="interim"
+              type="interim"
+              onChange={this.handleChange}
+              id="interim"
+              style={interim}
+            />
           </div>
+
+
           <div className="input-field">
             <label htmlFor="content">Content</label>
             <textarea
@@ -91,14 +118,11 @@ class CreateTodo extends Component {
             />
           </div>
           <div className="input-field">
-            <button className="btn pink listen-1 z-depth-0">
-              Submit!
+            <button className="btn waves-effect waves-light btn-large">Submit!
+            <i class="material-icons right">send</i>
             </button>
           </div>
         </form>
-        <button id="microphone-btn" className="waves-effect waves-light btn" onClick={this.toggleListen}>
-          Record!
-        </button>
       </div>
     );
   }
@@ -120,12 +144,11 @@ export default connect(mapStateToProps, mapDispatchToProps)(CreateTodo);
 
 const styles = {
   interim: {
-    color: 'gray',
-    border: '#ccc 1px solid',
+    color: 'black',
+    border: 'black 1px solid',
     padding: '1em',
-    margin: '1em',
-    width: '300px'
+    width: '300px',
   }
 };
 
-const {interim } = styles;
+const { interim } = styles;

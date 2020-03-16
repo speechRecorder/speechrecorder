@@ -3,6 +3,7 @@ html {
 }
 
 body {
+  background-image: url('/images/calmbackground.jpg');
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -11,22 +12,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
   min-height: 100%
 }
-/* dont think we need font-family to moz-osz
-net ninja adds a different style - Video 10
-font-family: sans-serif;
-background: url(/img/ ) -- whatever we can add our own image.
-background-position: bottom
-background-color: --whatever we want
-*/
 
 /* form {
   padding: 20px;
   margin-top: 60px
 } */
 
-form button, form h5{
+/* form button, form h5{
   margin: 20px 0;
-}
+} */
 
 input[type=text]:not(.browser-default):focus:not([readonly]),
 input[type=email]:not(.browser-default):focus:not([readonly]),
@@ -34,4 +28,12 @@ input[type=password]:not(.browser-default):focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]){
   border-color: green lighten-1;
   box-shadow: none;
+}
+
+#content-card {
+  background-color: whitesmoke;
+}
+
+#rate-pitch {
+  font-size: large;
 }
