@@ -1,68 +1,48 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Chat-Bacc
 
-## Available Scripts
+#### Chat-Bacc is an app that allows you to record reminders or set todos with Speech to Text implementation. You can play back reminders at a customized pitch/rate/voice of your choosing. A quick and easy reminder app that you can use at any time.
 
-In the project directory, you can run:
+## Tech Stack
 
-### `npm start`
+[Node.js](https://nodejs.org/en/)
+[Firebase](https://firebase.google.com/)
+[React](https://facebook.github.io/react/)
+[Redux](https://redux.js.org/)
+[Material CSS](https://materializecss.com/)
+[Bootstrap 4](https://getbootstrap.com/)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Either visit our deployed website at https://chat-bacc.firebaseapp.com/ or….
+Local Setup
+Run “git clone https://github.com/speechRecorder/speechrecorder.git”, then cd into that directory.
+Run “npm install”
+Run “npm start” to view the app at http://localhost:3000/
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Features
 
-### `npm test`
+- Create an account and begin signing up to set some todos or reminders!
+- Create some text by clicking the “Click me to record” button. You can also re-record to replace the to do if you don’t like what you currently have. You can also simply replace the text by typing it in as well.
+- You can playback your todos at a different rate - 0.5x, 1.0x, 1.5x, or 2.0x the speed.
+- You can also playback your todos at a different pitch - 0, 1 or 2.
+- Automatically add changes to your list of todos when you add or delete them.
+- Users can see all of their todos, or none at all.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Demo recording todo
+![](DEMO_record.gif)
+#### Demo playback of todo
+![](DEMO_playback.gif)
 
-### `npm run build`
+## Learning Takeaways
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Incorporating the Cloud Firestore with React/Redux was initially a challenge, but after some thorough configuration, we were able to compose the three technologies seamlessly.
+We had a fun learning experience with converting “old” promise syntax into more modern code with try/catch and async/await
+We experimented between using dom manipulation and react state
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+#### Future implementation and functionality
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Have the playback include different languages as well as accents.
+Be able to check off your todos/reminders when you are done.
+You can then filter your list by todos that are done or not.
+Have Google OAuth implemented and have the app allow you to sync up your todos with your google calendar.
+It should also sync with our Firebase - Cloud Firestore so that if you do delete a todo, it should also delete it from your google calendar.
+The app will be able to automatically categorize and filter a user's todos depending on key words and phrases.
+Make it a PWA. We would want the functionality to be a PWA so that a user can access it offline but also make changes if they have no internet connection.
