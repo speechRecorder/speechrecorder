@@ -12,18 +12,18 @@ class VoiceForm extends Component {
                   <label htmlFor="rate">Rate</label>
                   <div id="rate-value">{this.props.rate}</div>
                   <input onChange={this.props.onChange} name="rate" type="range" id="rate" className="custom-range"
-                  min="0.5" max="3.5" defaultValue="1" step="0.5" />
+                  min="0.5" max="2" defaultValue="1" step="0.5" />
                 </div>
 {/* PITCH */}
             <div className="form-group">
                   <label htmlFor="pitch">Pitch</label>
                   <div id="pitch-value">{this.props.pitch}</div>
                   <input onChange={this.props.onChange} name="pitch" type="range" id="pitch" className="custom-range"
-                  min="0.5" max="3.5" defaultValue="1" step="0.5" />
+                  min="0" max="2" defaultValue="1" step="1" />
                 </div>
 
               </form>
-            </div>  
+            </div>
           </div>
         </div>
       </div>

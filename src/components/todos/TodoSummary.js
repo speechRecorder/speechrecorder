@@ -15,7 +15,7 @@ class TodoSummary extends React.Component {
           <span className="card-title ">
             <div className="waves-effect waves-light btn">
               Playback{' '}
-              <Speech 
+              <Speech
                 text={content}
                 voice="Google UK English Male"
                 rate={rate}
@@ -29,6 +29,7 @@ class TodoSummary extends React.Component {
           </Link>
           <p>Posted by {`${authorFirstName} ${authorLastName}`}</p>
           <p className="grey-text">{moment(createdAt.toDate()).calendar()}</p>
+          <button>Delete</button>
         </div>
       </div>
     );
