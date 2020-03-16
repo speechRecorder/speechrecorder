@@ -23,7 +23,7 @@ class VoiceForm extends Component {
                 </div>
 
               </form>
-            </div>  
+            </div>
           </div>
         </div>
       </div>

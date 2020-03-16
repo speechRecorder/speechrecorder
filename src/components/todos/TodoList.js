@@ -13,11 +13,12 @@ const TodoList = ({ todos, rate, pitch }) => {
 
   return (
     <div className="todo-list section">
-      {/* ensure that we have todos */}
       {todos &&
         todos.map(todo => {
           return (
-              <TodoSummary rate={rate} pitch={pitch} todo={todo} key={todo.id}/>
+            <div>
+            <TodoSummary rate={rate} pitch={pitch} todo={todo} key={todo.id} />
+            </div>
           );
         })}
     </div>
